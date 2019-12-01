@@ -1,0 +1,28 @@
+
+        <form #form='ngForm' class="mb-4" autocomplete="off" (submit)="onsubmit(form)">
+                <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="Author">Author</label>
+                <input  name="Author" #Author="ngModel" [(ngModel)]="service.formData.Author"
+                    class="form-control" style="background-color: honeydew; color: black;" placeholder="Enter Author Name" required>
+             </div>
+            <div class="form-group col-md-6">
+                <label for="Title">Title</label>
+                <input name="Title" style="background-color: honeydew; color: black;" #Title="ngModel" [(ngModel)]="service.formData.Title" class="form-control"
+                   >
+            </div>
+            <div class="form-group col-12">
+                <label for="Author">ImagUrl</label>
+                <input type="text" name="imageUrl" #ImagUrl="ngModel" [(ngModel)]="service.formData.imageUrl"
+                    class="form-control" style="background-color: honeydew; color: black;" placeholder="Image">
+                   
+            </div>
+            <div class="form-group col">
+                <label for="Author">Post</label>
+                    <textarea class="form-control" rows="3"  name="body" #ImagUrl="ngModel" [(ngModel)]="service.formData.body"
+                    class="form-control" placeholder="body"></textarea>
+            </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    
