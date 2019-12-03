@@ -21,13 +21,14 @@ export class NewpostComponent implements OnInit {
          
    this.insertRecord(form);
    console.log(form.value)
-   this.service.getPosts();
+   
     
 }
 
 insertRecord(form:NgForm){
   this.service.addPost(form.value).subscribe(res =>{
-    this.resetForm(form)
+    this.resetForm(form);
+    this.service.getPosts();
   })
 }
 

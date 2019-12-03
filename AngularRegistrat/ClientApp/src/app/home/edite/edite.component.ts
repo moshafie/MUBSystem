@@ -15,7 +15,9 @@ export class EditeComponent implements OnInit {
   ngOnInit() {
   }
 updatePost(form: NgForm){
-this.service.putPost(form.value).subscribe();
+this.service.putPost(form.value).subscribe(res =>{
+  this.service.getPosts();
+});
 this.router.navigateByUrl("/home")
 }
 }
